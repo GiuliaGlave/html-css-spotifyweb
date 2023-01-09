@@ -1,0 +1,33 @@
+.top-content{
+    display: flex;
+}
+.side-bar{
+    background-color: red;
+    height: 40rem;
+    width: 10rem;
+}
+
+.content{
+    display: flex;
+}
+header {
+    background-color: blue;
+    height: 10rem;
+    width: calc(100% - 10rem);
+    position: fixed;
+}
+
+main {
+    background-color: green;
+    height: 40rem;
+    width: 1125px;
+    display: flex;
+    
+    
+}
+
+footer {
+    background-color: black;
+    height: 10rem;
+    width: 100%;
+}
