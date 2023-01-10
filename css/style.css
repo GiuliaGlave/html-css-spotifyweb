@@ -1,18 +1,20 @@
 .top-content{
+    background-color: #141922;
    
 /* l'altezza in vh, fai calc 100vh-altezza footer e crea una variabile */
     /* debug */
     display: flex;
     width: 100%;
+    
 }
 
 .side-bar{
+    background-color: black;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
  /* DEBUG */   
-    background-color: red;
     height: 40rem;
     /* la larghezza fissa la metti con il calc 100%-  x rem e crea variabile */
     width: 30%;
@@ -33,7 +35,7 @@
 .account{
 
 /* debug */
-    background-color: rgb(201, 105, 105);
+    color: white;
     width: 100%;
     
 }
@@ -50,9 +52,10 @@ header {
     display: flex;
     justify-content: end;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    
 
     /* debug */
-    background-color: blue;
     height: 10rem;
     width: 100%;
 }
@@ -61,8 +64,8 @@ header {
     border-radius: 2rem;
 
     /* debug */
-    background-color: rgb(102, 102, 245);
-
+    color: white;
+    border: solid white;
 }
 
 main {
@@ -71,10 +74,9 @@ main {
     overflow: auto;
 
 /* debug */
-    background-color: green;
     height: 40rem;
     width: 100%;
-    
+    color: white;
 }
 
 nav{
@@ -99,7 +101,7 @@ footer {
     justify-content: space-between;
     align-items: center;
   /* debug */  
-    background-color: black;
+    background-color: #282828;
     height: 10rem;
     width: 100%;
     color: white;
