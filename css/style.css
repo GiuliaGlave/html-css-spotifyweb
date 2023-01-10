@@ -52,7 +52,7 @@ header {
     display: flex;
     justify-content: end;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.);
     
 
     /* debug */
@@ -79,6 +79,25 @@ main {
     color: white;
 }
 
+/* MD RESPONSIVE */
+@media screen and (max-width: 878px) {
+    .play{
+        min-width: calc((100% / 12) * 3);
+    }
+}
+
+/* S RESPONSIVE */
+@media screen and (max-width: 639px) {
+    .play {
+        min-width: calc((100% / 12) * 6);
+    }
+}
+
+/* XS RESPONSIVE */
+@media screen and (max-width: 552px) {
+    /* solo icone sidebar */
+}
+
 nav{
     width: 100%;
     display: flex;
@@ -91,6 +110,11 @@ nav{
 .popular-artists-list{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.popular-artists-list .play img{
+    border-radius: 50%;
 }
 
 .play{
