@@ -1,31 +1,98 @@
 .top-content{
+   
+
+    /* debug */
     display: flex;
+    width: 100%;
 }
+
 .side-bar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+ /* DEBUG */   
     background-color: red;
     height: 40rem;
-    width: 10rem;
+    width: 30%;
+
+}
+
+.side-bar-content{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+   
+ 
+}
+
+.logo,
+.icons,
+.playlist,
+.account{
+
+/* debug */
+    background-color: rgb(201, 105, 105);
+    height: 3rem;
+    width: 100%;
+    
 }
 
 .content{
     display: flex;
+    width: 70%;
+    flex-direction: column;
+
+    /* debug */
+    height: 40rem;
 }
 header {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    /* debug */
     background-color: blue;
     height: 10rem;
-    width: calc(100% - 10rem);
-    position: fixed;
+    width: 100%;
+}
+
+.upgrade{
+    border-radius: 2rem;
+
+    /* debug */
+    background-color: rgb(102, 102, 245);
+
 }
 
 main {
+    display: flex;
+    flex-direction: column;
+
+/* debug */
     background-color: green;
     height: 40rem;
-    width: 1125px;
-    display: flex;
-    
+    width: 100%;
     
 }
 
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1rems;
+}
+
+.recently-played-list,
+.created-for-list,
+.popular-artists-list{
+    display: flex;
+    flex-direction: row;
+}
+
+.play{
+    width: calc(100% / 12 *6);
+}
 footer {
     background-color: black;
     height: 10rem;
