@@ -1,11 +1,16 @@
+/* :root{
+
+} */
+
 .top-content{
     background-color: #141922;
    
-/* l'altezza in vh, fai calc 100vh-altezza footer e crea una variabile */
+    /* l'altezza in vh, fai calc 100vh-altezza footer e   
+     crea una variabile */
+    
     /* debug */
     display: flex;
     width: 100%;
-    
 }
 
 .side-bar{
@@ -14,10 +19,12 @@
     flex-direction: column;
     justify-content: space-between;
 
- /* DEBUG */   
+    /* DEBUG */   
     height: 40rem;
-    /* la larghezza fissa la metti con il calc 100%-  x rem e crea variabile */
-    width: 30%;
+    
+    /* la larghezza fissa la metti con il calc 100%-  x 
+     rem e crea variabile */
+    width: 10rem;
 
 }
 
@@ -46,7 +53,7 @@
 
 .content{
     display: flex;
-    width: 70%;
+    width: 100%;
     flex-direction: column;
 
     /* debug */
@@ -100,6 +107,9 @@ main {
 /* XS RESPONSIVE */
 @media screen and (max-width: 552px) {
     
+    .side-bar{
+        width: 2rem;
+    }
     .logo :last-child {
             display: block;
     }
