@@ -1,12 +1,15 @@
-/* :root{
+:root{
+    --footer-height: 7rem;
 
-} */
+    --sidebar-width: 13rem;
+    --sidebar-width-xs: 4rem;
+
+    --header-height: 10rem;
+} 
 
 .top-content{
     background-color: #141922;
-   
-    /* l'altezza in vh, fai calc 100vh-altezza footer e   
-     crea una variabile */
+    height: calc(100vh - var(--footer-height));
     
     /* debug */
     display: flex;
@@ -14,42 +17,32 @@
 }
 
 .side-bar{
+    width: var(--sidebar-width);
     background-color: black;
+    overflow: hidden;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 1rem;
-
-    /* DEBUG */   
+    padding: 1rem; 
    
-    /* la larghezza fissa la metti con il calc 100%-  x 
-     rem e crea variabile */
-    width: 15rem;
+ 
 }
 
 .side-bar-content{
-    width: 12rem;
+    width: var(--sidebar-width);
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .logo :first-child {
-    width: 10rem;
+    width: 8rem;
 }
 
 .logo :last-child{
     display: none;
     width: 2rem;
-}
-
-.logo,
-.icons,
-.playlist,
-.account{
-
-/* debug */
-    color: gray;
 }
 
 .icons{
@@ -59,12 +52,11 @@
 }
 
 .icons > div :first-child{
-    width: 2rem;
-    vertical-align: middle;
+    width: 1.5rem;
+    vertical-align: bottom;
 }
 
 .playlist {
-    color: #a3a3a3;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -93,11 +85,9 @@
 
 .content{
     display: flex;
-    width: 100%;
+    width: calc(100% - var(--sidebar-width));
     flex-direction: column;
 
-    /* debug */
-    height: 40rem;
 }
 
 header {
@@ -107,8 +97,7 @@ header {
     background-color: rgba(0, 0, 0, 0.4);
     
     /* debug */
-    height: 10rem;
-    width: 100%;
+    height: var(--header-height);
 }
 
 .upgrade{
@@ -123,10 +112,9 @@ main {
     display: flex;
     flex-direction: column;
     overflow: auto;
+    height: calc(100% - var(--header-height));
 
  /* debug */
-    height: 40rem;
-    width: 100%;
     color: white;
 }
 
@@ -145,11 +133,13 @@ main {
 }
 
 /* XS RESPONSIVE */
+
 @media screen and (max-width: 552px) {
     
     .side-bar{
-        width: 4rem;
+        width: var(--sidebar-width-xs);
     }
+
     .logo :last-child {
             display: block;
     }
@@ -161,7 +151,6 @@ main {
         display: none;
         color: white;
     }
-
     .icons > div :first-child {
             display: block;
     }
@@ -170,9 +159,10 @@ main {
         display: none;
     }
 
-    hr{
-        display: none;
+    .content{
+        width: calc(100% - var(--sidebar-width-xs));
     }
+
 }
 
 nav{
@@ -198,12 +188,12 @@ nav{
     width: calc((100% / 12) *2);
 }
 footer {
+    height: var(--footer-height);
     display: flex;
     justify-content: space-between;
     align-items: center;
   /* debug */  
     background-color: #282828;
-    height: 10rem;
     width: 100%;
     color: white;
 }
