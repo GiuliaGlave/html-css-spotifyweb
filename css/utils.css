@@ -16,9 +16,20 @@
 	display: table;
 }
 
+h1{
+	font-size: large;
+	padding-bottom: 1rem;
+}
+
 h2{
 	font-weight: bold;
 	color: white;
+}
+
+.title > span,
+h1 + span {
+	color: darkgrey;
+	font-size: smaller;
 }
 
 ul{
