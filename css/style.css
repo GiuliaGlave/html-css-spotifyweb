@@ -4,7 +4,7 @@
     --sidebar-width: 13rem;
     --sidebar-width-xs: 4rem;
 
-    --header-height: 10rem;
+    --header-height: 7rem;
 } 
 
 .top-content{
@@ -91,28 +91,33 @@
 }
 
 header {
+    height: var(--header-height);
+    width: calc(100% - var(--sidebar-width));
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+
     display: flex;
     justify-content: end;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.4);
+
+    position: fixed;
     
-    /* debug */
-    height: var(--header-height);
 }
 
 .upgrade{
-    border-radius: 2rem;
-
-    /* debug */
+    border-radius: 3rem;
     color: white;
-    border: solid white;
+    border: solid thin white;
+    padding: 1rem 2rem;
+    font-size: small;
 }
 
 main {
     display: flex;
     flex-direction: column;
     overflow: auto;
-    height: calc(100% - var(--header-height));
+    height: 100%;
+    padding-top: var(--header-height);
 
  /* debug */
     color: white;

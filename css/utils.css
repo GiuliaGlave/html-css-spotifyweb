@@ -28,6 +28,11 @@ ul{
 	overflow: auto;
 }
 
+a{
+	text-decoration: none;
+	color: inherit;
+}
+
 #selected{
 	color: white;
 }
