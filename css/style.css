@@ -16,6 +16,7 @@
     width: 100%;
 }
 
+/* *****SIDE BAR****** */
 .side-bar{
     width: var(--sidebar-width);
     background-color: black;
@@ -83,6 +84,7 @@
     gap: 1rem;
 }
 
+/* *****CONTENT****** */
 .content{
     display: flex;
     width: calc(100% - var(--sidebar-width));
@@ -90,6 +92,7 @@
 
 }
 
+/* *****HEADER****** */
 header {
     height: var(--header-height);
     width: calc(100% - var(--sidebar-width));
@@ -111,6 +114,7 @@ header {
     font-size: small;
 }
 
+/* *****MAIN****** */
 main {
     display: flex;
     flex-direction: column;
@@ -120,54 +124,6 @@ main {
     height: 100%;
     padding: var(--header-height) 1rem;
     color: white;
-}
-
-/* MD RESPONSIVE */
-@media screen and (max-width: 878px) {
-    .play{
-        min-width: calc((100% / 12) * 3);
-    }
-   
-}
-
-/* S RESPONSIVE */
-@media screen and (max-width: 639px) {
-    .play {
-        min-width: calc((100% / 12) * 6);
-    }
-}
-
-/* XS RESPONSIVE */
-
-@media screen and (max-width: 552px) {
-    
-    .side-bar{
-        width: var(--sidebar-width-xs);
-    }
-
-    .logo :last-child {
-            display: block;
-    }
-    .logo :first-child {
-            display: none;
-    }
-
-    .icons > div :last-child{
-        display: none;
-        color: white;
-    }
-    .icons > div :first-child {
-            display: block;
-    }
-
-    .playlist{
-        display: none;
-    }
-
-    .content{
-        width: calc(100% - var(--sidebar-width-xs));
-    }
-
 }
 
 nav{
@@ -204,11 +160,13 @@ nav{
     text-align: center;
 }
 
+/* *****FOOTER****** */
 footer {
     height: var(--footer-height);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
     padding: 1rem;
     background-color: #282828;
     width: 100%;
@@ -217,10 +175,15 @@ footer {
     z-index: 1;
 }
 
+.img-track{
+    width: 25%;
+}
+
 .footer-title{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: 35%;
 }
 
 .footer-title :last-child{
@@ -232,48 +195,59 @@ footer {
     color: #a3a3a3;
     display: flex;
     gap: 1rem;
-    padding-left: 1rem;
+    width: 30%;
 }
 
-footer :first-child{
+.playing-track{
     display: flex;
     align-items: center;
-    gap: 1rem;
+    justify-content: space-between;
+    width: 20%;
 }
 
 footer img{
     width: 4rem;
 }
 
+
 .playing-bar{
     width: 50%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1rem;
 }
 
-.track-bar{
+.div-progress-bar{
     display: flex;
     gap: 2rem;
     align-items: center;
+    width: 100%;
 }
 
 .playing-btn {
-    justify-content: center;
+    display: flex;
+    gap: 2rem;
 }
 
-.playing-btn  span {
+.div-progress-bar span{
+    font-size: xx-small;
+}
+
+.playing-btn > span > i{
     font-size: large;
 }
 
-.track-time{
+.progress-bar,
+.volume-bar{
     width: 100%;
     height: 0.3rem;
     background-color: #5a5a5a;
     border-radius: 3rem;
 }
 
-.track-played{
+.progress,
+.volume{
     width: 20%;
     height: 100%;
     border-radius: 3rem;
@@ -283,6 +257,76 @@ footer img{
 .playing-settings{
     display: flex;
     align-items: center;
-    width: 15%;
+    width: 20%fix;
     gap: 1rem;
+}
+
+
+/* *****RESPONSIVE***** */
+
+/* MD RESPONSIVE */
+@media screen and (max-width: 878px) {
+    .play {
+        min-width: calc((100% / 12) * 3);
+    }
+
+}
+
+/* S RESPONSIVE */
+@media screen and (max-width: 639px) {
+    .play {
+        min-width: calc((100% / 12) * 6);
+    }
+
+    .playing-track{
+        gap: 1rem;
+    }
+
+    .footer-icons{
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .playing-settings{
+        width: 30%;
+    }
+}
+
+/* XS RESPONSIVE */
+
+@media screen and (max-width: 552px) {
+
+    .side-bar {
+        width: var(--sidebar-width-xs);
+    }
+
+    .logo :last-child {
+        display: block;
+    }
+
+    .logo :first-child {
+        display: none;
+    }
+
+    .icons>div :last-child {
+        display: none;
+        color: white;
+    }
+
+    .icons>div :first-child {
+        display: block;
+    }
+
+    .playlist {
+        display: none;
+    }
+
+    .content {
+        width: calc(100% - var(--sidebar-width-xs));
+    }
+
+    header {
+        width: calc(100% - var(--sidebar-width-xs));
+    }
+
 }
