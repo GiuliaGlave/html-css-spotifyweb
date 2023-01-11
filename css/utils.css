@@ -1,4 +1,9 @@
 /* Utils */
+*{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	font-size: small;
+}
 
 .container {
 	max-width: 1200px;
@@ -9,4 +14,17 @@
 	content: '';
 	clear: both;
 	display: table;
+}
+
+h2{
+	font-weight: bold;
+	color: white;
+}
+
+ul{
+	list-style: none;
+}
+
+#selected{
+	color: white;
 }
