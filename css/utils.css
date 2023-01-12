@@ -49,7 +49,7 @@ a{
 }
 
 .side-bar span,
-.side-bar li{
+.side-bar li a{
 	font-size: smaller;
 	color: #595959;
 }
