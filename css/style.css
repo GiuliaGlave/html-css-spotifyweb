@@ -84,20 +84,28 @@
     gap: 1rem;
 }
 
-.account{
+.side-bar-bottom {
     display: flex;
+    align-items: flex-start;
+    flex-direction: column;
 }
 
-.account > a {
+.account,
+.download {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    width: 100%;
+    padding: 0.5rem 0;
 }
 
-.account > a :first-child{
-    width: 2rem;
+.download{
+    border-bottom: solid thin #a3a3a3;
 }
 
+.download-icon{
+    width: 1rem;
+}
 .account-icon{
     width: 2rem;
     height: 2rem;
@@ -177,6 +185,22 @@ nav div a{
 .play{
     width: calc((100% / 12) *2);
     padding: 0 1rem;
+    position: relative;
+}
+
+.play-hover {
+    position: absolute;
+    top: -25%;
+    left: 0%;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.play-hover>i {
+    font-size: 3rem;
 }
 
 .title{
@@ -349,13 +373,15 @@ footer img{
         display: none;
     }
 
-    .account > a :first-child{
-        display: block;
-    }
-
-    .account > a :last-child{
+    .account-name,
+    .download-text{
         display: none;
     }
+
+    .download{
+        border-bottom: none;
+    }
+
     .content {
         width: calc(100% - var(--sidebar-width-xs));
     }
@@ -364,4 +390,26 @@ footer img{
         width: calc(100% - var(--sidebar-width-xs));
     }
 
+}
+
+/* ****HOVER**** */
+.side-bar-content :hover,
+.download :hover,
+nav > div > a:hover {
+    color: white;
+}
+
+.download :hover{
+    text-decoration: underline;
+}
+
+.upgrade:hover{
+    transform: scale(1.1);
+}
+
+.play:hover :not(img) {
+    opacity: 0.6;
+}
+.play-hover:hover {
+    opacity: 1;
 }
